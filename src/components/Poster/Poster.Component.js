@@ -10,13 +10,14 @@ const Poster = (props) => {
                 
                 <div>
                     <h3 className={`text-lg font-bold py-3
-                     ${props.isDark ? "text-white" : "text-gray-800"}`}>{props.title}</h3>
+                     ${props.isDark ? "text-blue" : "text-gray-800"}`}>{props.title}</h3>
                     <p className={`text-sm font-bold 
-                     ${props.isDark ? "text-white" : "text-gray-800"}`}>{props.subtitle}</p>
+                     ${props.isDark ? "text-blue" : "text-gray-800"}`}>{props.subtitle}</p>
                 </div>
             </div>
         </>
     )
 };
+
 
 export default Poster;
