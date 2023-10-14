@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import {  Route } from 'react-router-dom';
+
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+//HOC
+import DefaultHoc from './HOC/Default-hoc';
+//Homepage
+import Homepage from './Pages/Homepage';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <DefaultHoc path='/' Component={Homepage}/>
+    </>
   );
-}
+};
 
+// /,/movies
 export default App;
+
+//Normal method 
+
+//const tam = {
+//   name:"Tzn",
+//   age:2
+// }
+
+// const naresh = tam
+// naresh.goodstudent=true
+
+//spread operator
+
+// const tam = {
+//   name:"Tzn",
+//   age:2
+// }
+// const naresh = {...tam,goodstudent:true} //spreading 
+// {name: 'Tzn', age: 2, goodstudent: true}
+
