@@ -3,9 +3,9 @@ import React from "react";
 const Poster = (props) => {
     return (
         <>
-            <div className="flex flex-col items-start gap-2 px-4">
-                <div className="h-80">
-                    <img src={props.src} alt={props.title} className="w-full h-full rounded-md"/>
+            <div className="flex flex-col items-start gap-2 px-4 ">
+                <div className="h-80  w-full ">
+                    <img src={props.src} alt={props.title} className="w-full h-full rounded-md "/>
                 </div>
                     
                     <h3 className={`text-lg font-bold 

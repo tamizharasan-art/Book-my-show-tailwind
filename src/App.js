@@ -8,14 +8,17 @@ import "slick-carousel/slick/slick-theme.css";
 
 //HOC
 import DefaultHoc from './HOC/Default-hoc';
+import MovieHoc from './HOC/Movie-hoc';
 //Homepage
 import Homepage from './Pages/Homepage';
+import Moviepage from './Pages/Moviepage'
 
 
 function App() {
   return (
     <>
       <DefaultHoc path='/' Component={Homepage}/>
+      <MovieHoc path="/movies/:id" Component={Moviepage}/>
     </>
   );
 };

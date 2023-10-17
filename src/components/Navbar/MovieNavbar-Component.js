@@ -1,19 +1,18 @@
 import React from 'react';
-import {BiChevronRight,BiSearch,BiChevronDown,BiMenu} from 'react-icons/bi';
+import {BiChevronRight,BiSearch,BiChevronDown,BiMenu,BiChevronLeft,BiShareAlt} from 'react-icons/bi';
 
 
-const Navbarsm = () => {
+const MovieNavbarsm = () => {
     return(
         <>
         <div className='text-white p-3 flex justify-between items-center'>
-            <div className='text-xl font-bold'>
+            <div className='text-xl font-bold flex gap-2 items-center'>
+                <BiChevronLeft />
                 <h3>Its All Starts Here!!</h3>
-                <span className='text-xs items-center flex text-gray-300'>
-                    chennai<BiChevronRight/>
-                </span>
+
             </div>
             <div className='w-5 h-5 text-gray-300'>
-                <BiSearch className='w-full h-full'/>
+                <BiShareAlt className='w-full h-full'/>
             </div>
         </div>
         </>
@@ -61,17 +60,17 @@ const Navbarlg = () => {
     );
 };
 
-const Navbar = () => {
+const MovieNavbar = () => {
     return(
         <>
-        <nav className='bg-navcol-900 px-4 py-2 '>
+        <nav className='bg-navcol-900 px-4 py-2 absolute inset-x-0 z-20 bg-opacity-10 backdrop-filter backdrop-blur-sm  lg-relative'>
             <div className='md:hidden'>{
                 //MOBILEs view
-                <Navbarsm/>
+                <MovieNavbarsm/>
                 }</div>
-            <div className='hidden lg:hidden md:flex'>{
+            <div className='hidden lg:hidden md:block'>{
                 //Tablet view
-                <Navbarmd/>
+                <MovieNavbarsm/>
              }</div>
             <div className='hidden lg:flex'>{
                 //Laptop view
@@ -84,4 +83,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default MovieNavbar;
