@@ -18,7 +18,7 @@ const MovieHero = () => {
             {/* Large screen */}
             
             <div className="hidden lg:block relative " style={{height:"37rem"}}>
-
+              
 
                 
                 <div className="absolute h-full w-full z-10"
@@ -71,7 +71,7 @@ const MovieHero = () => {
                 </div>
 
                 
-            <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/ganapath--a-hero-is-born-et00300918-1697549981.jpg"
+                <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/ganapath--a-hero-is-born-et00300918-1697549981.jpg"
                 alt="Poster" className="w-full h-full"/>
                         
            
