@@ -2,9 +2,11 @@ import React from "react";
 //component
 import MovieHero from "../components/MovieHero/MovieHero-Component";
 import Cast from "../components/Cast&Crew/Cast-component";
+import Crew from "../components/Cast&Crew/Crew-component";
 
 import {BiCameraMovie} from 'react-icons/bi';
 import Castpics from "../Config/Cast-config";
+import Crewpics from "../Config/Crew-config";
 
 const Moviepage = () => {
 return (
@@ -39,12 +41,22 @@ return (
             <h1 className="font-bold text-xl text-gray-800">Cast</h1>
             <Cast image={Castpics}/>
         </div>
-        
-        <div className="my-20">
+
+        <div className="py-8">
          <hr>
          </hr>
       </div>
-      
+        
+
+      <div>
+         <h1 className="font-bold text-xl text-gray-800">Crew</h1>
+         <Crew pic={Crewpics}/>
+      </div>
+
+      <div className="py-8">
+         <hr>
+         </hr>
+      </div>
 
    </div>
 </div>

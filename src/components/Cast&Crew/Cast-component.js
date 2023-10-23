@@ -3,7 +3,7 @@ import React from "react";
 const Castcard = (props) => {
     return (
         <>
-        <div className="w-32 h-32 mt-8 flex flex-col items-center">
+        <div className="w-32 my-12 flex flex-col items-center">
             <div >
             <img 
             src={props.src} 
