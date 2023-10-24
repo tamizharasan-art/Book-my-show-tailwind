@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
+import axios from 'axios';
 
 import EntertainmentCardSlider from '../components/Entertainment/Entertainmentcard-component';
 
@@ -14,12 +15,24 @@ import TempPosters from '../Config/TempPosters-config';
 
 const Homepage = () => {
 
+    const [PopularMovies,setPopularMovies] = useState([]);
+
+    useEffect(() => {
+        const requestPopularMovies = async() => {
+            const getPopularMovies = await axios.get("/discover/tv?api_key=d9c578f62c6c1e400682ab496ea8516f");
+            setPopularMovies(getPopularMovies.data.results);
+        }
+        requestPopularMovies();
+    },[])
+    console.log({PopularMovies});
+
+
     return(
     <>
         <div className='flex flex-col items-start gap-12'>
             {/* Hero container */}
         <div className='container mx-auto sm:px-2 md:px-40'>
-            <PosterSlider images={TempPosters} isDark={false} />
+            <PosterSlider images={PopularMovies} isDark={false} />
             <div className='py-12'>
             <h1 className='text-2xl font-bold text-gray-800 py-4'>The Best of Live Events!!!</h1>
             <EntertainmentCardSlider />
@@ -38,16 +51,16 @@ const Homepage = () => {
                 </div>
             </div>
             <div className='container mx-auto sm:px-2 md:px-40'>
-               <PosterSlider images={TempPosters} title="Premier" subtitle="Brand new release at evert Friday" isDark/>
+               <PosterSlider images={PopularMovies} title="Premier" subtitle="Brand new release at evert Friday" isDark/>
             </div>
         </div>
 
         <div className='container mx-auto sm:px-2 md:px-40'>
-            <PosterSlider images={TempPosters} title="Live updates" isDark={false} />
+            <PosterSlider images={PopularMovies} title="Live updates" isDark={false} />
         </div>
 
         <div className='container mx-auto sm:px-2 md:px-40'>
-            <PosterSlider images={TempPosters} title="Outdoor Events" isDark={false} />
+            <PosterSlider images={PopularMovies} title="Outdoor Events" isDark={false} />
         </div>
         </div>
 
